@@ -50,9 +50,5 @@ q3 = atan2(R13(1,3), R13(1,1));
 %% make return value
 joint_angle_rad = [q1 q2 q3+hip_offset_angle_rad q4+knee_offset_anglr_rad q5 q6];
 
-for i=1:length(joint_angle_rad)
-    joint_angle_rad(i) = link(i).joint_dir * joint_angle_rad(i);
-end
-
 end
 

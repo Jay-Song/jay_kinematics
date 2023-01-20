@@ -44,9 +44,5 @@ q3 = atan2(-R03(3,1), R03(3,3));
 %% make return value
 joint_angle_rad = [q1 q2 q3 q4 q5 q6];
 
-for i=1:length(joint_angle_rad)
-    joint_angle_rad(i) = link(i).joint_dir * joint_angle_rad(i);
-end
-
 end
 
